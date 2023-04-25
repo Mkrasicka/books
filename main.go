@@ -1,6 +1,7 @@
 package main
 
-// import "github.com/gorilla/mux"
+import "github.com/gorilla/mux"
+
 // import (
 //         "encoding/json"
 //         "github.com/gorilla/mux"
@@ -22,4 +23,5 @@ func main() {
 		{ID: "3", Title: "War and Peace", Author: "Leo Tolstoy", Quantity: 3},
 	}
 
+router := mux.NewRouter()
 }
