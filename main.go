@@ -9,6 +9,19 @@ import "github.com/gorilla/mux"
 //         "net/http"
 // )
 
+type Books struct {
+	ID       string `json:"id"`
+	Title    string `json:"title"`
+	Author   string `json:"author"`
+	Quantity int    `json:"quantity"`
+}
+
 func main() {
-	router := mux.NewRouter()
+	var books = []books{
+		{ID: "1", Title: "Educated", Author: "Tara Westover", Quantity: 3},
+		{ID: "2", Title: "Myth of Normal", Author: "Tara Westover", Quantity: 3},
+		{ID: "3", Title: "War and Peace", Author: "Leo Tolstoy", Quantity: 3},
+	}
+
+router := mux.NewRouter()
 }
