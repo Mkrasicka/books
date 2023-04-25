@@ -1,6 +1,7 @@
 package main
 
-// import "github.com/gorilla/mux"
+import "github.com/gorilla/mux"
+
 // import (
 //         "encoding/json"
 //         "github.com/gorilla/mux"
@@ -9,5 +10,5 @@ package main
 // )
 
 func main() {
-
+	router := mux.NewRouter()
 }
