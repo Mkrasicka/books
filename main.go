@@ -21,5 +21,4 @@ func main() {
 		{ID: "2", Title: "Myth of Normal", Author: "Tara Westover", Quantity: 3},
 		{ID: "3", Title: "War and Peace", Author: "Leo Tolstoy", Quantity: 3},
 	}
-
 }
