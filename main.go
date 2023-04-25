@@ -1,13 +1,11 @@
 package main
 
-import "github.com/gorilla/mux"
-
-// import (
-//         "encoding/json"
-//         "github.com/gorilla/mux"
-//         "log"
-//         "net/http"
-// )
+import (
+	//         "encoding/json"
+	"github.com/gorilla/mux"
+	//         "log"
+	"net/http"
+)
 
 type Books struct {
 	ID       string `json:"id"`
@@ -23,5 +21,7 @@ func main() {
 		{ID: "3", Title: "War and Peace", Author: "Leo Tolstoy", Quantity: 3},
 	}
 
-router := mux.NewRouter()
+	router := mux.NewRouter()
+
+	http.ListenAndServe(":3000", router)
 }
