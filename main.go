@@ -60,6 +60,7 @@ func handleGetBooks(w http.ResponseWriter, r *http.Request) {
 
 func handleCreateBook(w http.ResponseWriter, r *http.Request) {
 	log.Println("Received POST request for new book")
+
 	var newBook Book
 
 	err := json.NewDecoder(r.Body).Decode(&newBook)
@@ -67,7 +68,6 @@ func handleCreateBook(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-
 	// Assign a unique ID to the new BOOk
 	newBook.ID = fmt.Sprintf("%d", len(books)+1)
 
@@ -79,7 +79,6 @@ func handleCreateBook(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
 	// json.NewEncoder(w).Encode(newBook)
 	io.WriteString(w, string(booksByte))
 }
